@@ -38,7 +38,7 @@ public class TransactionsFlowTypeYear {
         j.setMapOutputKeyClass(FlowTypeYearWritable.class);
         j.setMapOutputValueClass(IntWritable.class);
 
-        j.setOutputKeyClass(FlowTypeYearWritable.class);
+        j.setOutputKeyClass(Text.class);
         j.setOutputValueClass(IntWritable.class);
 
         FileInputFormat.addInputPath(j, input);
@@ -63,7 +63,7 @@ public class TransactionsFlowTypeYear {
         }
     }
 
-    public static class ReduceforFlowtypeYear extends Reducer<FlowTypeYearWritable, IntWritable, FlowTypeYearWritable, IntWritable> {
+    public static class ReduceforFlowtypeYear extends Reducer<FlowTypeYearWritable, IntWritable, Text, IntWritable> {
         public void reduce(FlowTypeYearWritable key, Iterable<IntWritable> values, Context con)
                 throws IOException, InterruptedException{
 
@@ -73,7 +73,8 @@ public class TransactionsFlowTypeYear {
                 somaQtds = o.get();
             }
 
-            con.write(key, new IntWritable(somaQtds));
+            String chave = key.getFlowType() + " " + key.getYear();
+            con.write(new Text(chave), new IntWritable(somaQtds));
         }
     }
 }

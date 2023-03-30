@@ -1,8 +1,8 @@
 package TDE01;
 
-import basic.WordCount;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -16,7 +16,7 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
-public class BrazilTransactions {
+public class CommodityValuePerYear {
     public static void main(String args[]) throws IOException,
             ClassNotFoundException,
             InterruptedException{
@@ -29,17 +29,16 @@ public class BrazilTransactions {
 
         Path output = new Path(files[1]);
 
-        Job j = new Job(c, "BrazilTransactions");
-
-        j.setJarByClass(BrazilTransactions.class);
-        j.setMapperClass(MapforBrazil.class);
-        j.setReducerClass(ReduceforBrazil.class);
+        Job j = new Job(c, "AverageCommoditiesValueperYear");
+        j.setJarByClass(CommodityValuePerYear.class);
+        j.setMapperClass(MapforCommValues.class);
+        j.setReducerClass(ReduceforCommValues.class);
 
 
         j.setMapOutputKeyClass(Text.class);
-        j.setMapOutputValueClass(IntWritable.class);
+        j.setMapOutputValueClass(CommValuesWritable.class);
         j.setOutputKeyClass(Text.class);
-        j.setOutputValueClass(IntWritable.class);
+        j.setOutputValueClass(FloatWritable.class);
 
         FileInputFormat.addInputPath(j, input);
         FileOutputFormat.setOutputPath(j, output);
@@ -47,35 +46,38 @@ public class BrazilTransactions {
         j.waitForCompletion(false);
 
     }
-    public static class MapforBrazil extends Mapper<LongWritable, Text, Text, IntWritable>{
+    public static class MapforCommValues extends Mapper<LongWritable, Text, Text, CommValuesWritable> {
         public void map(LongWritable key, Text value, Context con)
-        throws  IOException, InterruptedException{
+                throws  IOException, InterruptedException{
 
             String linha = value.toString();
 
             String colunas[] = linha.split(";");
 
-            String chave = colunas[0];
+            String ano = colunas[1];
+            float valor = Float.parseFloat(colunas[5]);
             int qtd = 1;
 
-            if (chave.equals("Brazil")){
-                con.write(new Text(chave), new IntWritable(qtd));
-            }
-
+            con.write(new Text(ano), new CommValuesWritable(valor, qtd));
         }
     }
 
 
 
-    public static class ReduceforBrazil extends Reducer<Text, IntWritable, Text, IntWritable>{
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
-        throws IOException, InterruptedException{
+    public static class ReduceforCommValues extends Reducer<Text, CommValuesWritable, Text, FloatWritable> {
+        public void reduce(Text key, Iterable<CommValuesWritable> values, Context con)
+                throws IOException, InterruptedException {
 
-            int contagem = 0;
-            for(IntWritable v : values){
-                contagem += v.get();
+            float somaValores = 0.0f;
+            int somaQtds = 0;
+            for (CommValuesWritable o : values){
+                somaValores += o.getSomaValores();
+                somaQtds += o.getQtd();
             }
-            con.write(key, new IntWritable(contagem));
+
+            float media = somaValores/somaQtds;
+
+            con.write(key, new FloatWritable(media));
 
         }
     }
