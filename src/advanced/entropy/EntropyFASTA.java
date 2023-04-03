@@ -14,6 +14,7 @@ import org.apache.log4j.BasicConfigurator;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class EntropyFASTA {
@@ -34,18 +35,33 @@ public class EntropyFASTA {
         // Criando o primeiro job
         Job j1 = new Job(c, "parte 1");
 
+        Job j2 = new Job(c, "parte 2");
+
         j1.setJarByClass(EntropyFASTA.class);
         j1.setMapperClass(MapEtapaA.class);
         j1.setReducerClass(ReduceEtapaA.class);
+
+        j2.setJarByClass(EntropyFASTA.class);
+        j2.setMapperClass(MapEtapaB.class);
+        j2.setReducerClass(ReduceEtapaB.class);
 
         j1.setMapOutputKeyClass(Text.class);
         j1.setMapOutputValueClass(LongWritable.class);
         j1.setOutputKeyClass(Text.class);
         j1.setMapOutputValueClass(LongWritable.class);
 
+        j2.setMapOutputKeyClass(Text.class);
+        j2.setMapOutputValueClass(BaseQtdWritable.class);
+        j2.setOutputKeyClass(Text.class);
+        j2.setOutputValueClass(DoubleWritable.class);
+
         FileInputFormat.addInputPath(j1, input);
+        FileOutputFormat.setOutputPath(j1, intermediate);
+        FileInputFormat.addInputPath(j2, input);
+        FileOutputFormat.setOutputPath(j2, output);
         FileOutputFormat.setOutputPath(j1, output);
         j1.waitForCompletion(false);
+        j2.waitForCompletion(false);
     }
 
     public static class MapEtapaA extends Mapper<LongWritable, Text, Text, LongWritable> {
@@ -79,12 +95,36 @@ public class EntropyFASTA {
     public static class MapEtapaB extends Mapper<LongWritable, Text, Text, BaseQtdWritable> {
         public void map(LongWritable key, Text value, Context con)
                 throws IOException, InterruptedException {
+            String linha = value.toString();
+
+            String campos [] = linha.split("\t");
+            String caracter = campos [0];
+            long qtd = Long.parseLong(campos[1]);
+
+            Text chave = new Text("entropia");
+            con.write(chave, new BaseQtdWritable(caracter, qtd));
         }
     }
 
     public static class ReduceEtapaB extends Reducer<Text, BaseQtdWritable, Text, DoubleWritable> {
         public void reduce(Text key, Iterable<BaseQtdWritable> values, Context con)
                 throws IOException, InterruptedException {
+            long somaTotal = 0;
+            ArrayList<BaseQtdWritable> listagem = new ArrayList<>();
+            for (BaseQtdWritable v : values){
+                if(v.getCaracter().equals("total")) {
+                    somaTotal += v.getContagem();
+                }else{
+                    listagem.add(new BaseQtdWritable(v.getCaracter(), v.getContagem()));
+                }
+            }
+
+            // percorrer os caracteres e calcular as probabilidades e entropias
+            for (BaseQtdWritable v : listagem){
+                double prob = v.getContagem() / somaTotal;
+                double entropia = -prob * Math.log(prob)/ Math.log(2.0);
+                con.write(new Text(v.getCaracter()), new DoubleWritable(entropia));
+            }
         }
     }
 }
