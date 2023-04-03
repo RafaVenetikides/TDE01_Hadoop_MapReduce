@@ -45,6 +45,7 @@ public class EntropyFASTA {
 
         FileInputFormat.addInputPath(j1, input);
         FileOutputFormat.setOutputPath(j1, output);
+        j1.waitForCompletion(false);
     }
 
     public static class MapEtapaA extends Mapper<LongWritable, Text, Text, LongWritable> {
