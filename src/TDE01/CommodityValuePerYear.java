@@ -51,18 +51,17 @@ public class CommodityValuePerYear {
                 throws  IOException, InterruptedException{
 
             String linha = value.toString();
+            if(!linha.startsWith("country")) {
+                String colunas[] = linha.split(";");
 
-            String colunas[] = linha.split(";");
+                String ano = colunas[1];
+                float valor = Float.parseFloat(colunas[5]);
+                int qtd = 1;
 
-            String ano = colunas[1];
-            float valor = Float.parseFloat(colunas[5]);
-            int qtd = 1;
-
-            con.write(new Text(ano), new CommValuesWritable(valor, qtd));
+                con.write(new Text(ano), new CommValuesWritable(valor, qtd));
+            }
         }
     }
-
-
 
     public static class ReduceforCommValues extends Reducer<Text, CommValuesWritable, Text, FloatWritable> {
         public void reduce(Text key, Iterable<CommValuesWritable> values, Context con)
