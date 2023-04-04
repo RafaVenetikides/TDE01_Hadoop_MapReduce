@@ -44,13 +44,21 @@ public class FlowTypeYearWritable
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
-        dataOutput.writeChars(flowType);
+        dataOutput.writeUTF(flowType);
         dataOutput.writeInt(year);
     }
 
     @Override
+    public String toString() {
+        return "FlowTypeYearWritable{" +
+                "flowType='" + flowType + '\'' +
+                ", year=" + year +
+                '}';
+    }
+
+    @Override
     public void readFields(DataInput dataInput) throws IOException {
-        flowType = dataInput.readLine();
+        flowType = dataInput.readUTF();
         year = dataInput.readInt();
     }
 

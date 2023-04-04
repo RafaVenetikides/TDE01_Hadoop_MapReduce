@@ -15,9 +15,8 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
-public class TransactionsFlowTypeYear {
+public class AvaragePriceinBrazil {
     public static void main(String args[]) throws IOException,
-
             ClassNotFoundException,
             InterruptedException{
         BasicConfigurator.configure();
@@ -31,15 +30,15 @@ public class TransactionsFlowTypeYear {
 
         Job j = new Job(c, "BrazilTransactions");
 
-        j.setJarByClass(TransactionsFlowTypeYear.class);
-        j.setMapperClass(MapforFlowtypeYear.class);
-        j.setReducerClass(ReduceforFlowtypeYear.class);
+        j.setJarByClass(BrazilTransactions.class);
+        j.setMapperClass(BrazilTransactions.MapforBrazil.class);
+        j.setReducerClass(BrazilTransactions.ReduceforBrazil.class);
 
-        j.setMapOutputKeyClass(FlowTypeYearWritable.class);
-        j.setMapOutputValueClass(IntWritable.class);
 
-        j.setOutputKeyClass(FlowTypeYearWritable.class);
-        j.setOutputValueClass(IntWritable.class);
+        j.setMapOutputKeyClass(Text.class);
+        j.setMapOutputValueClass(BrazilCommoditiesWritable.class);
+        //j.setOutputKeyClass();
+        //j.setOutputValueClass();
 
         FileInputFormat.addInputPath(j, input);
         FileOutputFormat.setOutputPath(j, output);
@@ -47,33 +46,33 @@ public class TransactionsFlowTypeYear {
         j.waitForCompletion(false);
 
     }
-    public static class MapforFlowtypeYear extends Mapper<LongWritable, Text, FlowTypeYearWritable, IntWritable> {
+    public static class MapforBrazil extends Mapper<LongWritable, Text, Text, BrazilCommoditiesWritable> {
         public void map(LongWritable key, Text value, Context con)
                 throws  IOException, InterruptedException{
-
             String linha = value.toString();
             if(!linha.startsWith("country")) {
                 String colunas[] = linha.split(";");
-
-                String flowType = colunas[4];
                 int year = Integer.parseInt(colunas[1]);
+                String type = colunas[7];
+                String category = colunas[8];
                 int qtd = 1;
 
-                con.write(new FlowTypeYearWritable(flowType, year), new IntWritable(qtd));
+                if (colunas[0] == "Brazil" && colunas[4] == "Export"){
+                    con.write(new Text("Chave"), new BrazilCommoditiesWritable(year, type, category, qtd) );
+                }
             }
         }
     }
 
-    public static class ReduceforFlowtypeYear extends Reducer<FlowTypeYearWritable, IntWritable, FlowTypeYearWritable, IntWritable> {
-        public void reduce(FlowTypeYearWritable key, Iterable<IntWritable> values, Context con)
+
+
+    public static class ReduceforBrazil extends Reducer<Text, BrazilCommoditiesWritable, Text, IntWritable> {
+        public void reduce(Text key, Iterable<BrazilCommoditiesWritable> values, Context con)
                 throws IOException, InterruptedException{
-
-            int somaQtds = 0;
-
-            for (IntWritable o : values) {
-                somaQtds += o.get();
+            int somaTotal = 0;
+            for (BrazilCommoditiesWritable v : values){
+                somaTotal += v.getQtd();
             }
-            con.write(key, new IntWritable(somaQtds));
         }
     }
 }
