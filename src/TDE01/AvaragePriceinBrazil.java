@@ -2,7 +2,7 @@ package TDE01;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -31,14 +31,13 @@ public class AvaragePriceinBrazil {
         Job j = new Job(c, "BrazilTransactions");
 
         j.setJarByClass(BrazilTransactions.class);
-        j.setMapperClass(BrazilTransactions.MapforBrazil.class);
-        j.setReducerClass(BrazilTransactions.ReduceforBrazil.class);
+        j.setMapperClass(MapforBrazilCommodities.class);
+        j.setReducerClass(ReduceforBrazilCommodities.class);
 
-
-        j.setMapOutputKeyClass(Text.class);
-        j.setMapOutputValueClass(BrazilCommoditiesWritable.class);
-        //j.setOutputKeyClass();
-        //j.setOutputValueClass();
+        j.setMapOutputKeyClass(BrazilCommoditiesTypeWritable.class);
+        j.setMapOutputValueClass(BrazilCommoditiesAverageVariables.class);
+        j.setOutputKeyClass(BrazilCommoditiesTypeWritable.class);
+        j.setOutputValueClass(FloatWritable.class);
 
         FileInputFormat.addInputPath(j, input);
         FileOutputFormat.setOutputPath(j, output);
@@ -46,7 +45,7 @@ public class AvaragePriceinBrazil {
         j.waitForCompletion(false);
 
     }
-    public static class MapforBrazil extends Mapper<LongWritable, Text, Text, BrazilCommoditiesWritable> {
+    public static class MapforBrazilCommodities extends Mapper<LongWritable, Text, BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables> {
         public void map(LongWritable key, Text value, Context con)
                 throws  IOException, InterruptedException{
             String linha = value.toString();
@@ -55,10 +54,11 @@ public class AvaragePriceinBrazil {
                 int year = Integer.parseInt(colunas[1]);
                 String type = colunas[7];
                 String category = colunas[8];
+                float price = Float.parseFloat(colunas[5]);
                 int qtd = 1;
 
-                if (colunas[0] == "Brazil" && colunas[4] == "Export"){
-                    con.write(new Text("Chave"), new BrazilCommoditiesWritable(year, type, category, qtd) );
+                if (colunas[0].equals("Brazil") && colunas[4].equals("Export")){
+                    con.write(new BrazilCommoditiesTypeWritable(year, type, category), new BrazilCommoditiesAverageVariables(qtd, price));
                 }
             }
         }
@@ -66,13 +66,18 @@ public class AvaragePriceinBrazil {
 
 
 
-    public static class ReduceforBrazil extends Reducer<Text, BrazilCommoditiesWritable, Text, IntWritable> {
-        public void reduce(Text key, Iterable<BrazilCommoditiesWritable> values, Context con)
+    public static class ReduceforBrazilCommodities extends Reducer<BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables, BrazilCommoditiesTypeWritable, FloatWritable> {
+        public void reduce(BrazilCommoditiesTypeWritable key, Iterable<BrazilCommoditiesAverageVariables> values, Context con)
                 throws IOException, InterruptedException{
             int somaTotal = 0;
-            for (BrazilCommoditiesWritable v : values){
+            float somaPrecos = 0;
+            for (BrazilCommoditiesAverageVariables v : values){
                 somaTotal += v.getQtd();
+                somaPrecos += v.getValor();
             }
+            float media = somaPrecos/somaTotal;
+            con.write(key, new FloatWritable(media));
+
         }
     }
 }
