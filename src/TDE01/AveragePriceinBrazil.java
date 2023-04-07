@@ -15,7 +15,7 @@ import org.apache.log4j.BasicConfigurator;
 
 import java.io.IOException;
 
-public class AvaragePriceinBrazil {
+public class AveragePriceinBrazil {
     public static void main(String args[]) throws IOException,
             ClassNotFoundException,
             InterruptedException{
