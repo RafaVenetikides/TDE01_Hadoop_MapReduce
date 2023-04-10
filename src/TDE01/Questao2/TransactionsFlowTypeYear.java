@@ -1,4 +1,4 @@
-package TDE01;
+package TDE01.Questao2;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -29,7 +29,7 @@ public class TransactionsFlowTypeYear {
 
         Path output = new Path(files[1]);
 
-        Job j = new Job(c, "BrazilTransactions");
+        Job j = new Job(c, "TransactionsPerFlowTypeYear");
 
         j.setJarByClass(TransactionsFlowTypeYear.class);
         j.setMapperClass(MapforFlowtypeYear.class);

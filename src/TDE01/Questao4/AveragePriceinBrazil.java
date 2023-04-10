@@ -1,4 +1,4 @@
-package TDE01;
+package TDE01.Questao4;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -30,7 +30,7 @@ public class AveragePriceinBrazil {
 
         Job j = new Job(c, "BrazilTransactions");
 
-        j.setJarByClass(BrazilTransactions.class);
+        j.setJarByClass(AveragePriceinBrazil.class);
         j.setMapperClass(MapforBrazilCommodities.class);
         j.setReducerClass(ReduceforBrazilCommodities.class);
 

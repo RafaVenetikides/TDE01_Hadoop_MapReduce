@@ -1,4 +1,4 @@
-package TDE01;
+package TDE01.Questao1;
 
 import basic.WordCount;
 import org.apache.hadoop.conf.Configuration;
