@@ -31,13 +31,17 @@ public class MaxMinMeanTransactions {
         Job j = new Job(c, "MaxMinTransactions");
 
         j.setJarByClass(MaxMinMeanTransactions.class);
-        j.setMapperClass();
-        j.setReducerClass();
+        j.setMapperClass(MapMaxMinMean.class);
+        j.setReducerClass(ReduceMaxMinMean.class);
     }
-    public static class MapMaxMinMean extends Mapper<>{  // Setar valores de entrada e saida
+    public static class MapMaxMinMean extends Mapper<LongWritable, Text, >{  // Setar valores de entrada e saida
         public void map(LongWritable key, Text value, Context con)
             throws IOException, InterruptedException{
+            String linha = value.toString();
+            if (!linha.startsWith("contry")){
+                String colunas[] = linha.split(";");
 
+            }
         }
     }
     public  static class ReduceMaxMinMean extends Reducer<>{
