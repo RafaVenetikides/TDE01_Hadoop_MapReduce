@@ -1,8 +1,5 @@
 package TDE01.Questao6;
 
-import TDE01.BrazilTransactions;
-import advanced.entropy.BaseQtdWritable;
-import advanced.entropy.EntropyFASTA;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.DoubleWritable;
