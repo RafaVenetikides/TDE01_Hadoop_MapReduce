@@ -1,4 +1,4 @@
-package TDE01;
+package TDE01.Questao3;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
