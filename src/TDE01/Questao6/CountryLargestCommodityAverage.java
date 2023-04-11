@@ -2,10 +2,7 @@ package TDE01.Questao6;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.DoubleWritable;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
@@ -19,7 +16,7 @@ import java.io.IOException;
 public class CountryLargestCommodityAverage {
     public static void main(String args[]) throws IOException,
             ClassNotFoundException,
-            InterruptedException{
+            InterruptedException {
         BasicConfigurator.configure();
 
         Configuration c = new Configuration();
@@ -44,87 +41,92 @@ public class CountryLargestCommodityAverage {
         j2.setReducerClass(CountryLargestCommodityAverage.ReduceEtapaB.class);
 
         j1.setMapOutputKeyClass(Text.class);
-        j1.setMapOutputValueClass(LongWritable.class);
+        j1.setMapOutputValueClass(CountryCommoditiesValuesWritable.class);
         j1.setOutputKeyClass(Text.class);
-        j1.setMapOutputValueClass(LongWritable.class);
+        j1.setOutputValueClass(FloatWritable.class);
 
         j2.setMapOutputKeyClass(Text.class);
-        j2.setMapOutputValueClass(BaseQtdWritable.class);
+        j2.setMapOutputValueClass(CountryAvarageWritable.class);
         j2.setOutputKeyClass(Text.class);
-        j2.setOutputValueClass(DoubleWritable.class);
+        j2.setOutputValueClass(FloatWritable.class);
+
+
 
         FileInputFormat.addInputPath(j1, input);
         FileOutputFormat.setOutputPath(j1, intermediate);
-        FileInputFormat.addInputPath(j2, input);
+        FileInputFormat.addInputPath(j2, intermediate);
         FileOutputFormat.setOutputPath(j2, output);
-        FileOutputFormat.setOutputPath(j1, output);
+
         j1.waitForCompletion(false);
         j2.waitForCompletion(false);
 
     }
-    public static class MapEtapaA extends Mapper<LongWritable, Text, Text, IntWritable> {
+
+    public static class MapEtapaA extends Mapper<LongWritable, Text, Text, CountryCommoditiesValuesWritable> {
         public void map(LongWritable key, Text value, Context con)
-                throws  IOException, InterruptedException{
+                throws IOException, InterruptedException {
+
+            String linha = value.toString();
+            if (!linha.startsWith("country")) {
+                String colunas[] = linha.split(";");
+                if (colunas[4].equals("Export")) {
+                    String country = colunas[0];
+                    float price = Float.parseFloat(colunas[5]);
+                    int qtd = 1;
+
+                    con.write(new Text(country), new CountryCommoditiesValuesWritable(price, qtd));
+                }
+            }
+        }
+    }
+
+
+    public static class ReduceEtapaA extends Reducer<Text, CountryCommoditiesValuesWritable, Text, FloatWritable> {
+        public void reduce(Text key, Iterable<CountryCommoditiesValuesWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            int somaTotal = 0;
+            float somaPrecos = 0;
+            for (CountryCommoditiesValuesWritable v : values) {
+                somaTotal += v.getQtd();
+                somaPrecos += v.getValor();
+            }
+
+            float media = somaPrecos / somaTotal;
+
+            con.write(key, new FloatWritable(media));
+
+        }
+    }
+
+    public static class MapEtapaB extends Mapper<LongWritable, Text, Text, CountryAvarageWritable> {
+        public void map(LongWritable key, Text value, Context con)
+                throws IOException, InterruptedException {
 
             String linha = value.toString();
 
-            String colunas[] = linha.split(";");
+            String campos [] = linha.split("\t");
 
-            String chave = colunas[0];
-            int qtd = 1;
-
-            if (chave.equals("Brazil")){
-                con.write(new Text(chave), new IntWritable(qtd));
-            }
-
+            String country = campos[0];
+            float average = Float.parseFloat(campos[1]);
+            con.write(new Text("Chave"), new CountryAvarageWritable(country, average));
         }
     }
 
 
-
-    public static class ReduceEtapaA extends Reducer<Text, IntWritable, Text, IntWritable> {
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
-                throws IOException, InterruptedException{
-
-            int contagem = 0;
-            for(IntWritable v : values){
-                contagem += v.get();
+    public static class ReduceEtapaB extends Reducer<Text, CountryAvarageWritable, Text, FloatWritable> {
+        public void reduce(Text key, Iterable<CountryAvarageWritable> values, Context con)
+                throws IOException, InterruptedException {
+            String country = null;
+            float valor = Float.MIN_VALUE;
+            for(CountryAvarageWritable v : values){
+                if(v.getValor() > valor){
+                    country = v.getCountry();
+                    valor = v.getValor();
+                }
             }
-            con.write(key, new IntWritable(contagem));
-
-        }
-    }
-
-    public static class MapEtapaB extends Mapper<LongWritable, Text, Text, IntWritable> {
-        public void map(LongWritable key, Text value, Context con)
-                throws  IOException, InterruptedException{
-
-            String linha = value.toString();
-
-            String colunas[] = linha.split(";");
-
-            String chave = colunas[0];
-            int qtd = 1;
-
-            if (chave.equals("Brazil")){
-                con.write(new Text(chave), new IntWritable(qtd));
-            }
-
-        }
-    }
-
-
-
-    public static class ReduceEtapaB extends Reducer<Text, IntWritable, Text, IntWritable> {
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
-                throws IOException, InterruptedException{
-
-            int contagem = 0;
-            for(IntWritable v : values){
-                contagem += v.get();
-            }
-            con.write(key, new IntWritable(contagem));
-
+            con.write(new Text(country), new FloatWritable(valor));
         }
     }
 }
+
