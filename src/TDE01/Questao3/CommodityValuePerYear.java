@@ -1,10 +1,8 @@
 package TDE01.Questao3;
 
-import TDE01.Questao2.TransactionsFlowTypeYear;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.FloatWritable;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -33,7 +31,7 @@ public class CommodityValuePerYear {
         Job j = new Job(c, "AverageCommoditiesValueperYear");
         j.setJarByClass(CommodityValuePerYear.class);
         j.setMapperClass(MapforCommValues.class);
-        j.setCombinerClass(CombineForAverage.class);
+        j.setCombinerClass(CombineforCommValues.class);
         j.setReducerClass(ReduceforCommValues.class);
 
 
@@ -65,7 +63,7 @@ public class CommodityValuePerYear {
         }
     }
 
-    public static class CombineForAverage extends Reducer<Text, CommValuesWritable, Text, CommValuesWritable>{
+    public static class CombineforCommValues extends Reducer<Text, CommValuesWritable, Text, CommValuesWritable>{
         public void reduce(Text key, Iterable<CommValuesWritable> values, Context con)
                 throws IOException, InterruptedException {
 
@@ -75,10 +73,8 @@ public class CommodityValuePerYear {
                 somaQtds += o.getQtd();
                 somaValores += o.getSomaValores();
             }
-            // passando para o reduce valores pre-somados
+
             con.write(key, new CommValuesWritable(somaValores, somaQtds));
-
-
         }
     }
 

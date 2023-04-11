@@ -1,0 +1,264 @@
+MaxMinMeanWritable{type='Volume in cubic meters', year=2016}	MaxMinMeanResultsWritable{maxPrice=4.3781765E9, minPrice=1.4439864E8, meanPrice=4.5403988E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2015}	MaxMinMeanResultsWritable{maxPrice=4.8914166E9, minPrice=4.2677904E7, meanPrice=5.2220036E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2014}	MaxMinMeanResultsWritable{maxPrice=3.24833306E9, minPrice=3.170496E8, meanPrice=5.821542E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2013}	MaxMinMeanResultsWritable{maxPrice=2.06002509E9, minPrice=7.647848E7, meanPrice=2.6715836E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2012}	MaxMinMeanResultsWritable{maxPrice=6.687422E9, minPrice=2.15340512E8, meanPrice=1.01315768E8}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2011}	MaxMinMeanResultsWritable{maxPrice=5.4484854E9, minPrice=3.79154048E8, meanPrice=7.9722816E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2010}	MaxMinMeanResultsWritable{maxPrice=6.7488686E9, minPrice=6.4258692E7, meanPrice=7.3870368E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2009}	MaxMinMeanResultsWritable{maxPrice=9.6689856E8, minPrice=1.7357784E8, meanPrice=1.7841956E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2008}	MaxMinMeanResultsWritable{maxPrice=1.75254451E9, minPrice=6.6309344E7, meanPrice=2.1229136E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2007}	MaxMinMeanResultsWritable{maxPrice=1.9513463E9, minPrice=1.12887432E8, meanPrice=2.476735E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2006}	MaxMinMeanResultsWritable{maxPrice=8.5756109E9, minPrice=3.7567688E7, meanPrice=7.0453192E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2005}	MaxMinMeanResultsWritable{maxPrice=1.9284169E9, minPrice=7.6420688E7, meanPrice=2.1563072E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2004}	MaxMinMeanResultsWritable{maxPrice=4.26455296E9, minPrice=3.1227804E7, meanPrice=3.9788516E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2003}	MaxMinMeanResultsWritable{maxPrice=3.26168678E9, minPrice=3.0777462E7, meanPrice=4.8663064E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2002}	MaxMinMeanResultsWritable{maxPrice=1.55704653E9, minPrice=4.7304908E7, meanPrice=3.5980684E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2001}	MaxMinMeanResultsWritable{maxPrice=8.356295E8, minPrice=2555726.0, meanPrice=2.0674028E7}
+MaxMinMeanWritable{type='Volume in cubic meters', year=2000}	MaxMinMeanResultsWritable{maxPrice=1.77278285E9, minPrice=5255661.0, meanPrice=4.3368592E7}
+MaxMinMeanWritable{type='Length in metres', year=2016}	MaxMinMeanResultsWritable{maxPrice=964313.0, minPrice=213448.0, meanPrice=74562.95}
+MaxMinMeanWritable{type='Length in metres', year=2015}	MaxMinMeanResultsWritable{maxPrice=1741242.0, minPrice=242299.0, meanPrice=116034.66}
+MaxMinMeanWritable{type='Length in metres', year=2014}	MaxMinMeanResultsWritable{maxPrice=2.5792124E7, minPrice=155537.0, meanPrice=758637.44}
+MaxMinMeanWritable{type='Length in metres', year=2013}	MaxMinMeanResultsWritable{maxPrice=2.7885024E7, minPrice=940849.0, meanPrice=678828.8}
+MaxMinMeanWritable{type='Length in metres', year=2012}	MaxMinMeanResultsWritable{maxPrice=2.3922272E7, minPrice=1783053.0, meanPrice=1150099.2}
+MaxMinMeanWritable{type='Length in metres', year=2011}	MaxMinMeanResultsWritable{maxPrice=6.2320196E7, minPrice=2579051.0, meanPrice=1343239.9}
+MaxMinMeanWritable{type='Length in metres', year=2010}	MaxMinMeanResultsWritable{maxPrice=4.0837464E7, minPrice=380141.0, meanPrice=1055655.1}
+MaxMinMeanWritable{type='Length in metres', year=2009}	MaxMinMeanResultsWritable{maxPrice=2.15678976E8, minPrice=9855736.0, meanPrice=4011606.0}
+MaxMinMeanWritable{type='Length in metres', year=2008}	MaxMinMeanResultsWritable{maxPrice=9.2221152E7, minPrice=3373282.0, meanPrice=2124846.8}
+MaxMinMeanWritable{type='Length in metres', year=2007}	MaxMinMeanResultsWritable{maxPrice=2.47774528E8, minPrice=4537176.0, meanPrice=5399856.0}
+MaxMinMeanWritable{type='Length in metres', year=2006}	MaxMinMeanResultsWritable{maxPrice=2.37867712E8, minPrice=59823.0, meanPrice=3078333.8}
+MaxMinMeanWritable{type='Length in metres', year=2005}	MaxMinMeanResultsWritable{maxPrice=1.68866864E8, minPrice=138574.0, meanPrice=2169586.2}
+MaxMinMeanWritable{type='Length in metres', year=2004}	MaxMinMeanResultsWritable{maxPrice=3.338512E8, minPrice=4243160.0, meanPrice=5332394.0}
+MaxMinMeanWritable{type='Length in metres', year=2003}	MaxMinMeanResultsWritable{maxPrice=4.64368E8, minPrice=7798559.0, meanPrice=6715131.0}
+MaxMinMeanWritable{type='Length in metres', year=2002}	MaxMinMeanResultsWritable{maxPrice=9.4170544E7, minPrice=932664.0, meanPrice=2739081.5}
+MaxMinMeanWritable{type='Length in metres', year=2001}	MaxMinMeanResultsWritable{maxPrice=2.42979136E8, minPrice=3.2098728E7, meanPrice=7250066.0}
+MaxMinMeanWritable{type='Length in metres', year=2000}	MaxMinMeanResultsWritable{maxPrice=5.9069965E8, minPrice=702497.0, meanPrice=1.196392E7}
+MaxMinMeanWritable{type='Length in metres', year=1999}	MaxMinMeanResultsWritable{maxPrice=1.21836352E9, minPrice=5.2195404E7, meanPrice=2.099125E7}
+MaxMinMeanWritable{type='Length in metres', year=1998}	MaxMinMeanResultsWritable{maxPrice=8.3305171E8, minPrice=1.5014693E7, meanPrice=1.2036104E7}
+MaxMinMeanWritable{type='Length in metres', year=1997}	MaxMinMeanResultsWritable{maxPrice=8.5813734E8, minPrice=9.5891728E7, meanPrice=1.2744291E7}
+MaxMinMeanWritable{type='Length in metres', year=1996}	MaxMinMeanResultsWritable{maxPrice=1.2794249E9, minPrice=134461.0, meanPrice=1.6050791E7}
+MaxMinMeanWritable{type='Length in metres', year=1995}	MaxMinMeanResultsWritable{maxPrice=3.12242688E8, minPrice=6.6951984E7, meanPrice=9961406.0}
+MaxMinMeanWritable{type='Length in metres', year=1994}	MaxMinMeanResultsWritable{maxPrice=7.114871E8, minPrice=5.8746124E7, meanPrice=1.8324134E7}
+MaxMinMeanWritable{type='Length in metres', year=1993}	MaxMinMeanResultsWritable{maxPrice=4.31639744E8, minPrice=6.956436E7, meanPrice=8549852.0}
+MaxMinMeanWritable{type='Length in metres', year=1992}	MaxMinMeanResultsWritable{maxPrice=7.8329318E8, minPrice=8.518716E7, meanPrice=1.299592E7}
+MaxMinMeanWritable{type='Length in metres', year=1991}	MaxMinMeanResultsWritable{maxPrice=2.1690504E7, minPrice=492643.0, meanPrice=1415063.2}
+MaxMinMeanWritable{type='Length in metres', year=1990}	MaxMinMeanResultsWritable{maxPrice=9.649196E7, minPrice=41916.0, meanPrice=2879979.5}
+MaxMinMeanWritable{type='Length in metres', year=1989}	MaxMinMeanResultsWritable{maxPrice=3.0022654E7, minPrice=62178.0, meanPrice=1013384.8}
+MaxMinMeanWritable{type='Length in metres', year=1988}	MaxMinMeanResultsWritable{maxPrice=1.2612536E7, minPrice=14988.0, meanPrice=1288585.5}
+MaxMinMeanWritable{type='Thousands of items', year=2016}	MaxMinMeanResultsWritable{maxPrice=1.4574117E7, minPrice=6636.0, meanPrice=2027250.9}
+MaxMinMeanWritable{type='Thousands of items', year=2015}	MaxMinMeanResultsWritable{maxPrice=8167335.0, minPrice=425130.0, meanPrice=1831404.5}
+MaxMinMeanWritable{type='Thousands of items', year=2014}	MaxMinMeanResultsWritable{maxPrice=4.5189216E7, minPrice=2209331.0, meanPrice=7048683.5}
+MaxMinMeanWritable{type='Thousands of items', year=2013}	MaxMinMeanResultsWritable{maxPrice=7.593716E7, minPrice=1063513.0, meanPrice=8725287.0}
+MaxMinMeanWritable{type='Thousands of items', year=2012}	MaxMinMeanResultsWritable{maxPrice=1.11023696E8, minPrice=75786.0, meanPrice=8901954.0}
+MaxMinMeanWritable{type='Thousands of items', year=2011}	MaxMinMeanResultsWritable{maxPrice=3.0797808E7, minPrice=459654.0, meanPrice=4043211.5}
+MaxMinMeanWritable{type='Thousands of items', year=2010}	MaxMinMeanResultsWritable{maxPrice=4.954732E7, minPrice=244623.0, meanPrice=3038011.2}
+MaxMinMeanWritable{type='Thousands of items', year=2009}	MaxMinMeanResultsWritable{maxPrice=4.6510584E7, minPrice=24945.0, meanPrice=4747403.5}
+MaxMinMeanWritable{type='Thousands of items', year=2008}	MaxMinMeanResultsWritable{maxPrice=4.3966688E7, minPrice=40320.0, meanPrice=2872090.5}
+MaxMinMeanWritable{type='Thousands of items', year=2007}	MaxMinMeanResultsWritable{maxPrice=2.990292E7, minPrice=141970.0, meanPrice=4584477.0}
+MaxMinMeanWritable{type='Thousands of items', year=2006}	MaxMinMeanResultsWritable{maxPrice=2.879114E7, minPrice=56487.0, meanPrice=5529525.5}
+MaxMinMeanWritable{type='Thousands of items', year=2005}	MaxMinMeanResultsWritable{maxPrice=3.7865392E7, minPrice=63597.0, meanPrice=5417299.0}
+MaxMinMeanWritable{type='Thousands of items', year=2004}	MaxMinMeanResultsWritable{maxPrice=2.175209E7, minPrice=23482.0, meanPrice=3132994.2}
+MaxMinMeanWritable{type='Thousands of items', year=2003}	MaxMinMeanResultsWritable{maxPrice=2690127.0, minPrice=24765.0, meanPrice=402348.0}
+MaxMinMeanWritable{type='Thousands of items', year=2002}	MaxMinMeanResultsWritable{maxPrice=1.2273512E7, minPrice=1932.0, meanPrice=1849380.2}
+MaxMinMeanWritable{type='Thousands of items', year=2001}	MaxMinMeanResultsWritable{maxPrice=1.901555E7, minPrice=170426.0, meanPrice=4096241.2}
+MaxMinMeanWritable{type='Thousands of items', year=2000}	MaxMinMeanResultsWritable{maxPrice=1.3730595E7, minPrice=224876.0, meanPrice=2061303.6}
+MaxMinMeanWritable{type='Number of pairs', year=2016}	MaxMinMeanResultsWritable{maxPrice=4.5313915E9, minPrice=1.57211008E9, meanPrice=3.9341504E7}
+MaxMinMeanWritable{type='Number of pairs', year=2015}	MaxMinMeanResultsWritable{maxPrice=2.39416156E10, minPrice=7.6896954E8, meanPrice=7.5234496E7}
+MaxMinMeanWritable{type='Number of pairs', year=2014}	MaxMinMeanResultsWritable{maxPrice=7.5407811E9, minPrice=9.1170886E8, meanPrice=4.261156E7}
+MaxMinMeanWritable{type='Number of pairs', year=2013}	MaxMinMeanResultsWritable{maxPrice=5.4177551E9, minPrice=1.47205504E9, meanPrice=3.0974498E7}
+MaxMinMeanWritable{type='Number of pairs', year=2012}	MaxMinMeanResultsWritable{maxPrice=2.64550687E10, minPrice=4.97470272E8, meanPrice=7.432528E7}
+MaxMinMeanWritable{type='Number of pairs', year=2011}	MaxMinMeanResultsWritable{maxPrice=8.9932667E9, minPrice=1.57178189E9, meanPrice=5.112984E7}
+MaxMinMeanWritable{type='Number of pairs', year=2010}	MaxMinMeanResultsWritable{maxPrice=1.0567254E10, minPrice=4.4999808E8, meanPrice=3.678908E7}
+MaxMinMeanWritable{type='Number of pairs', year=2009}	MaxMinMeanResultsWritable{maxPrice=8.4348841E9, minPrice=7.8472883E8, meanPrice=3.8124648E7}
+MaxMinMeanWritable{type='Number of pairs', year=2008}	MaxMinMeanResultsWritable{maxPrice=8.3149455E9, minPrice=1.54190579E9, meanPrice=3.9243304E7}
+MaxMinMeanWritable{type='Number of pairs', year=2007}	MaxMinMeanResultsWritable{maxPrice=8.6360873E9, minPrice=2.11649392E8, meanPrice=3.2036478E7}
+MaxMinMeanWritable{type='Number of pairs', year=2006}	MaxMinMeanResultsWritable{maxPrice=8.379433E9, minPrice=6.3671808E8, meanPrice=2.5116766E7}
+MaxMinMeanWritable{type='Number of pairs', year=2005}	MaxMinMeanResultsWritable{maxPrice=3.05648205E9, minPrice=9.8298024E7, meanPrice=1.7341068E7}
+MaxMinMeanWritable{type='Number of pairs', year=2004}	MaxMinMeanResultsWritable{maxPrice=6.1502193E9, minPrice=5.9315347E8, meanPrice=2.9761626E7}
+MaxMinMeanWritable{type='Number of pairs', year=2003}	MaxMinMeanResultsWritable{maxPrice=5.3393152E9, minPrice=5.8960344E7, meanPrice=2.6432518E7}
+MaxMinMeanWritable{type='Number of pairs', year=2002}	MaxMinMeanResultsWritable{maxPrice=3.46014771E9, minPrice=4.17003456E8, meanPrice=1.9723578E7}
+MaxMinMeanWritable{type='Number of pairs', year=2001}	MaxMinMeanResultsWritable{maxPrice=4.6581197E9, minPrice=4.60124544E8, meanPrice=2.2988216E7}
+MaxMinMeanWritable{type='Number of pairs', year=2000}	MaxMinMeanResultsWritable{maxPrice=2.85959296E9, minPrice=3.84424544E8, meanPrice=1.9050056E7}
+MaxMinMeanWritable{type='Number of pairs', year=1999}	MaxMinMeanResultsWritable{maxPrice=2.86706816E9, minPrice=3.878148E7, meanPrice=7.134412E7}
+MaxMinMeanWritable{type='Number of pairs', year=1998}	MaxMinMeanResultsWritable{maxPrice=2.75974426E9, minPrice=8.2701416E7, meanPrice=2.8479356E7}
+MaxMinMeanWritable{type='Number of pairs', year=1997}	MaxMinMeanResultsWritable{maxPrice=1.40727834E9, minPrice=4.2420336E7, meanPrice=1.837163E7}
+MaxMinMeanWritable{type='Number of pairs', year=1996}	MaxMinMeanResultsWritable{maxPrice=3.96446566E9, minPrice=1.3370568E7, meanPrice=4.7755408E7}
+MaxMinMeanWritable{type='Number of pairs', year=1995}	MaxMinMeanResultsWritable{maxPrice=3.55704474E9, minPrice=7.5195352E7, meanPrice=8.569908E7}
+MaxMinMeanWritable{type='Number of pairs', year=1994}	MaxMinMeanResultsWritable{maxPrice=2.94525619E9, minPrice=423059.0, meanPrice=5.1026636E7}
+MaxMinMeanWritable{type='Number of pairs', year=1993}	MaxMinMeanResultsWritable{maxPrice=2.67247309E9, minPrice=285552.0, meanPrice=6.919056E7}
+MaxMinMeanWritable{type='Number of pairs', year=1992}	MaxMinMeanResultsWritable{maxPrice=6.9114989E8, minPrice=980590.0, meanPrice=3.189058E7}
+MaxMinMeanWritable{type='Number of pairs', year=1991}	MaxMinMeanResultsWritable{maxPrice=2.9505996E7, minPrice=531520.0, meanPrice=2918476.8}
+MaxMinMeanWritable{type='Number of pairs', year=1990}	MaxMinMeanResultsWritable{maxPrice=1.22138976E8, minPrice=1782334.0, meanPrice=4568775.5}
+MaxMinMeanWritable{type='Number of pairs', year=1989}	MaxMinMeanResultsWritable{maxPrice=6.0957824E7, minPrice=5862830.0, meanPrice=3012155.5}
+MaxMinMeanWritable{type='Number of pairs', year=1988}	MaxMinMeanResultsWritable{maxPrice=1.9819588E7, minPrice=119893.0, meanPrice=2511541.2}
+MaxMinMeanWritable{type='Volume in litres', year=2016}	MaxMinMeanResultsWritable{maxPrice=4.11388442E9, minPrice=1.09780902E9, meanPrice=2.8192936E7}
+MaxMinMeanWritable{type='Volume in litres', year=2015}	MaxMinMeanResultsWritable{maxPrice=4.7502351E9, minPrice=4.1781872E8, meanPrice=2.8753814E7}
+MaxMinMeanWritable{type='Volume in litres', year=2014}	MaxMinMeanResultsWritable{maxPrice=7.8963456E9, minPrice=2.67258982E9, meanPrice=4.953598E7}
+MaxMinMeanWritable{type='Volume in litres', year=2013}	MaxMinMeanResultsWritable{maxPrice=1.33338481E10, minPrice=3.48884896E8, meanPrice=5.0383316E7}
+MaxMinMeanWritable{type='Volume in litres', year=2012}	MaxMinMeanResultsWritable{maxPrice=6.7161477E9, minPrice=4.11787904E8, meanPrice=3.0187162E7}
+MaxMinMeanWritable{type='Volume in litres', year=2011}	MaxMinMeanResultsWritable{maxPrice=2.68372506E9, minPrice=1.77872653E9, meanPrice=1.9783414E7}
+MaxMinMeanWritable{type='Volume in litres', year=2010}	MaxMinMeanResultsWritable{maxPrice=6.8504079E9, minPrice=2.20444368E8, meanPrice=2.9819546E7}
+MaxMinMeanWritable{type='Volume in litres', year=2009}	MaxMinMeanResultsWritable{maxPrice=5.8324956E9, minPrice=7.3227949E8, meanPrice=3.2330324E7}
+MaxMinMeanWritable{type='Volume in litres', year=2008}	MaxMinMeanResultsWritable{maxPrice=6.9151939E9, minPrice=8.2953338E8, meanPrice=4.363256E7}
+MaxMinMeanWritable{type='Volume in litres', year=2007}	MaxMinMeanResultsWritable{maxPrice=4.612863E9, minPrice=2.67419888E8, meanPrice=2.1620136E7}
+MaxMinMeanWritable{type='Volume in litres', year=2006}	MaxMinMeanResultsWritable{maxPrice=6.9484186E9, minPrice=3.7693792E8, meanPrice=3.0072814E7}
+MaxMinMeanWritable{type='Volume in litres', year=2005}	MaxMinMeanResultsWritable{maxPrice=4.5913313E9, minPrice=2.35033184E8, meanPrice=1.6354998E7}
+MaxMinMeanWritable{type='Volume in litres', year=2004}	MaxMinMeanResultsWritable{maxPrice=3.67387315E9, minPrice=7.166503E8, meanPrice=1.5230847E7}
+MaxMinMeanWritable{type='Volume in litres', year=2003}	MaxMinMeanResultsWritable{maxPrice=4.4870738E9, minPrice=5.835417E8, meanPrice=1.7295592E7}
+MaxMinMeanWritable{type='Volume in litres', year=2002}	MaxMinMeanResultsWritable{maxPrice=4.7529452E9, minPrice=2.08056576E8, meanPrice=1.6956112E7}
+MaxMinMeanWritable{type='Volume in litres', year=2001}	MaxMinMeanResultsWritable{maxPrice=2.72391142E9, minPrice=3.7363208E7, meanPrice=1.154095E7}
+MaxMinMeanWritable{type='Volume in litres', year=2000}	MaxMinMeanResultsWritable{maxPrice=3.68293581E9, minPrice=1.61402864E8, meanPrice=1.0426864E7}
+MaxMinMeanWritable{type='Volume in litres', year=1999}	MaxMinMeanResultsWritable{maxPrice=7.6983419E9, minPrice=4.96295168E8, meanPrice=1.2755054E7}
+MaxMinMeanWritable{type='Volume in litres', year=1998}	MaxMinMeanResultsWritable{maxPrice=1.21975153E10, minPrice=3.30431968E8, meanPrice=2.933827E7}
+MaxMinMeanWritable{type='Volume in litres', year=1997}	MaxMinMeanResultsWritable{maxPrice=2.12314829E10, minPrice=2.30346608E8, meanPrice=2.3776834E7}
+MaxMinMeanWritable{type='Volume in litres', year=1996}	MaxMinMeanResultsWritable{maxPrice=9.5094262E9, minPrice=2.5145904E8, meanPrice=2.395171E7}
+MaxMinMeanWritable{type='Volume in litres', year=1995}	MaxMinMeanResultsWritable{maxPrice=3.11208407E10, minPrice=8.3171706E8, meanPrice=4.24079E7}
+MaxMinMeanWritable{type='Volume in litres', year=1994}	MaxMinMeanResultsWritable{maxPrice=2.87904891E10, minPrice=2.05582336E9, meanPrice=4.771898E7}
+MaxMinMeanWritable{type='Volume in litres', year=1993}	MaxMinMeanResultsWritable{maxPrice=1.2284245E10, minPrice=1.54581888E9, meanPrice=4.4176748E7}
+MaxMinMeanWritable{type='Volume in litres', year=1992}	MaxMinMeanResultsWritable{maxPrice=6.9291848E9, minPrice=5.7776749E8, meanPrice=2.7355608E7}
+MaxMinMeanWritable{type='Volume in litres', year=1991}	MaxMinMeanResultsWritable{maxPrice=5.0260669E9, minPrice=3.5355876E7, meanPrice=2.0034032E7}
+MaxMinMeanWritable{type='Volume in litres', year=1990}	MaxMinMeanResultsWritable{maxPrice=6.1124844E9, minPrice=3.57024288E8, meanPrice=4.2832764E7}
+MaxMinMeanWritable{type='Volume in litres', year=1989}	MaxMinMeanResultsWritable{maxPrice=4.07379789E9, minPrice=1.34431248E8, meanPrice=2.6571922E7}
+MaxMinMeanWritable{type='Volume in litres', year=1988}	MaxMinMeanResultsWritable{maxPrice=1.8538197E10, minPrice=5.679168E7, meanPrice=1.83296608E8}
+MaxMinMeanWritable{type='Number of items', year=2016}	MaxMinMeanResultsWritable{maxPrice=3.7268136E10, minPrice=8.3606799E9, meanPrice=3.5447036E7}
+MaxMinMeanWritable{type='Number of items', year=2015}	MaxMinMeanResultsWritable{maxPrice=8.4053156E10, minPrice=4.10886349E9, meanPrice=5.1623336E7}
+MaxMinMeanWritable{type='Number of items', year=2014}	MaxMinMeanResultsWritable{maxPrice=5.3899796E10, minPrice=1.00682107E10, meanPrice=3.0486752E7}
+MaxMinMeanWritable{type='Number of items', year=2013}	MaxMinMeanResultsWritable{maxPrice=4.5374427E10, minPrice=1.68166513E10, meanPrice=3.0987292E7}
+MaxMinMeanWritable{type='Number of items', year=2012}	MaxMinMeanResultsWritable{maxPrice=3.3097218E10, minPrice=8.989228E9, meanPrice=2.5948848E7}
+MaxMinMeanWritable{type='Number of items', year=2011}	MaxMinMeanResultsWritable{maxPrice=5.2769853E10, minPrice=5.0011699E9, meanPrice=3.1440274E7}
+MaxMinMeanWritable{type='Number of items', year=2010}	MaxMinMeanResultsWritable{maxPrice=3.8963249E10, minPrice=8.6433659E9, meanPrice=2.4598324E7}
+MaxMinMeanWritable{type='Number of items', year=2009}	MaxMinMeanResultsWritable{maxPrice=4.0970531E10, minPrice=1.16613908E10, meanPrice=2.8194942E7}
+MaxMinMeanWritable{type='Number of items', year=2008}	MaxMinMeanResultsWritable{maxPrice=5.4437896E10, minPrice=7.012757E9, meanPrice=4.0315352E7}
+MaxMinMeanWritable{type='Number of items', year=2007}	MaxMinMeanResultsWritable{maxPrice=5.5612281E10, minPrice=3.12369946E9, meanPrice=2.750667E7}
+MaxMinMeanWritable{type='Number of items', year=2006}	MaxMinMeanResultsWritable{maxPrice=4.3150508E10, minPrice=3.91895014E9, meanPrice=2.4315366E7}
+MaxMinMeanWritable{type='Number of items', year=2005}	MaxMinMeanResultsWritable{maxPrice=2.71855391E10, minPrice=6.9129452E9, meanPrice=1.9280482E7}
+MaxMinMeanWritable{type='Number of items', year=2004}	MaxMinMeanResultsWritable{maxPrice=3.9694451E10, minPrice=4.5577789E9, meanPrice=2.6598246E7}
+MaxMinMeanWritable{type='Number of items', year=2003}	MaxMinMeanResultsWritable{maxPrice=2.94688133E10, minPrice=3.88308992E9, meanPrice=1.6741069E7}
+MaxMinMeanWritable{type='Number of items', year=2002}	MaxMinMeanResultsWritable{maxPrice=2.92825723E10, minPrice=8.832469E9, meanPrice=2.041487E7}
+MaxMinMeanWritable{type='Number of items', year=2001}	MaxMinMeanResultsWritable{maxPrice=2.10506732E10, minPrice=2.43628851E9, meanPrice=1.4729387E7}
+MaxMinMeanWritable{type='Number of items', year=2000}	MaxMinMeanResultsWritable{maxPrice=3.15420795E10, minPrice=4.537897E9, meanPrice=2.205339E7}
+MaxMinMeanWritable{type='Number of items', year=1999}	MaxMinMeanResultsWritable{maxPrice=3.13001349E10, minPrice=4.31051264E8, meanPrice=4.5208748E7}
+MaxMinMeanWritable{type='Number of items', year=1998}	MaxMinMeanResultsWritable{maxPrice=3.7943734E10, minPrice=5.14881632E8, meanPrice=3.3676228E7}
+MaxMinMeanWritable{type='Number of items', year=1997}	MaxMinMeanResultsWritable{maxPrice=2.75685622E10, minPrice=5.5352339E8, meanPrice=2.9376506E7}
+MaxMinMeanWritable{type='Number of items', year=1996}	MaxMinMeanResultsWritable{maxPrice=9.3984307E9, minPrice=3.9175776E8, meanPrice=2.6330186E7}
+MaxMinMeanWritable{type='Number of items', year=1995}	MaxMinMeanResultsWritable{maxPrice=5.4831693E9, minPrice=5.5751475E8, meanPrice=2.1084768E7}
+MaxMinMeanWritable{type='Number of items', year=1994}	MaxMinMeanResultsWritable{maxPrice=8.6652365E9, minPrice=2.8962217E9, meanPrice=2.9911462E7}
+MaxMinMeanWritable{type='Number of items', year=1993}	MaxMinMeanResultsWritable{maxPrice=2.4670421E10, minPrice=4.28306496E8, meanPrice=4.5467184E7}
+MaxMinMeanWritable{type='Number of items', year=1992}	MaxMinMeanResultsWritable{maxPrice=5.8881772E9, minPrice=2.2981E8, meanPrice=3.0217812E7}
+MaxMinMeanWritable{type='Number of items', year=1991}	MaxMinMeanResultsWritable{maxPrice=2.3923839E10, minPrice=8.7012966E8, meanPrice=6.672354E7}
+MaxMinMeanWritable{type='Number of items', year=1990}	MaxMinMeanResultsWritable{maxPrice=2.77678234E9, minPrice=4.12163104E8, meanPrice=1.5835401E7}
+MaxMinMeanWritable{type='Number of items', year=1989}	MaxMinMeanResultsWritable{maxPrice=5.2921298E9, minPrice=2.41024336E8, meanPrice=1.8593362E7}
+MaxMinMeanWritable{type='Number of items', year=1988}	MaxMinMeanResultsWritable{maxPrice=8.8788435E8, minPrice=4.449576E7, meanPrice=1.4837521E7}
+MaxMinMeanWritable{type='Weight in carats', year=2016}	MaxMinMeanResultsWritable{maxPrice=9557468.0, minPrice=7957993.0, meanPrice=8757730.0}
+MaxMinMeanWritable{type='Weight in carats', year=2015}	MaxMinMeanResultsWritable{maxPrice=3344601.0, minPrice=106617.0, meanPrice=1150406.0}
+MaxMinMeanWritable{type='Weight in carats', year=2014}	MaxMinMeanResultsWritable{maxPrice=8219261.0, minPrice=354.0, meanPrice=1397241.1}
+MaxMinMeanWritable{type='Weight in carats', year=2013}	MaxMinMeanResultsWritable{maxPrice=1.1658688E9, minPrice=487.0, meanPrice=1.45744576E8}
+MaxMinMeanWritable{type='Weight in carats', year=2012}	MaxMinMeanResultsWritable{maxPrice=1.46092257E10, minPrice=64333.0, meanPrice=1.04365971E9}
+MaxMinMeanWritable{type='Weight in carats', year=2011}	MaxMinMeanResultsWritable{maxPrice=1.70005914E10, minPrice=84167.0, meanPrice=2.72778656E8}
+MaxMinMeanWritable{type='Weight in carats', year=2010}	MaxMinMeanResultsWritable{maxPrice=2.94317711E10, minPrice=4.45063104E8, meanPrice=5.4263507E8}
+MaxMinMeanWritable{type='Weight in carats', year=2009}	MaxMinMeanResultsWritable{maxPrice=1.43658762E10, minPrice=1.18089104E8, meanPrice=1.98783536E8}
+MaxMinMeanWritable{type='Weight in carats', year=2008}	MaxMinMeanResultsWritable{maxPrice=3.71621888E9, minPrice=429210.0, meanPrice=5.9404552E7}
+MaxMinMeanWritable{type='Weight in carats', year=2007}	MaxMinMeanResultsWritable{maxPrice=7.6162826E9, minPrice=6320741.0, meanPrice=1.20013904E8}
+MaxMinMeanWritable{type='Weight in carats', year=2006}	MaxMinMeanResultsWritable{maxPrice=1.01324186E10, minPrice=1.796316E8, meanPrice=2.92641376E8}
+MaxMinMeanWritable{type='Weight in carats', year=2005}	MaxMinMeanResultsWritable{maxPrice=1.29697147E10, minPrice=8374332.0, meanPrice=3.67901568E8}
+MaxMinMeanWritable{type='Weight in carats', year=2004}	MaxMinMeanResultsWritable{maxPrice=1.10372186E9, minPrice=8433140.0, meanPrice=4.931026E7}
+MaxMinMeanWritable{type='Weight in carats', year=2003}	MaxMinMeanResultsWritable{maxPrice=5.4110136E9, minPrice=130672.0, meanPrice=1.20456544E8}
+MaxMinMeanWritable{type='Weight in carats', year=2002}	MaxMinMeanResultsWritable{maxPrice=1.00484721E10, minPrice=5335.0, meanPrice=2.32908448E8}
+MaxMinMeanWritable{type='Weight in carats', year=2001}	MaxMinMeanResultsWritable{maxPrice=5.6184663E9, minPrice=5865414.0, meanPrice=2.6811136E8}
+MaxMinMeanWritable{type='Weight in carats', year=2000}	MaxMinMeanResultsWritable{maxPrice=6.4670674E9, minPrice=105350.0, meanPrice=1.44465312E8}
+MaxMinMeanWritable{type='Weight in carats', year=1992}	MaxMinMeanResultsWritable{maxPrice=2.63142784E8, minPrice=1.10940784E8, meanPrice=1.7267112E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2016}	MaxMinMeanResultsWritable{maxPrice=1.06528269E9, minPrice=9.3551808E7, meanPrice=2.3321776E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2015}	MaxMinMeanResultsWritable{maxPrice=3.08051354E9, minPrice=400.0, meanPrice=5.9608211E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2014}	MaxMinMeanResultsWritable{maxPrice=3.19930035E9, minPrice=2.13388928E8, meanPrice=6.2975642E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2013}	MaxMinMeanResultsWritable{maxPrice=5.390249E9, minPrice=12075.0, meanPrice=8.7763232E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2012}	MaxMinMeanResultsWritable{maxPrice=3.5317353E9, minPrice=3660624.0, meanPrice=5.989479E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2011}	MaxMinMeanResultsWritable{maxPrice=2.17325926E9, minPrice=9500.0, meanPrice=2.8171152E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2010}	MaxMinMeanResultsWritable{maxPrice=3.01113754E9, minPrice=5436207.0, meanPrice=4.08086112E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2009}	MaxMinMeanResultsWritable{maxPrice=1.54958707E9, minPrice=924.0, meanPrice=2.51176416E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2008}	MaxMinMeanResultsWritable{maxPrice=2.07555558E9, minPrice=7.8576184E7, meanPrice=2.62594672E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2007}	MaxMinMeanResultsWritable{maxPrice=9.3423885E8, minPrice=432.0, meanPrice=1.22806008E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2006}	MaxMinMeanResultsWritable{maxPrice=1.31907942E9, minPrice=2.3681332E7, meanPrice=2.69291872E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2005}	MaxMinMeanResultsWritable{maxPrice=4.27643418E9, minPrice=1.7877392E7, meanPrice=9.3087731E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2004}	MaxMinMeanResultsWritable{maxPrice=2.5400592E8, minPrice=5.3403164E7, meanPrice=9.0293096E7}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2003}	MaxMinMeanResultsWritable{maxPrice=4.8913312E8, minPrice=9432161.0, meanPrice=1.23333136E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2002}	MaxMinMeanResultsWritable{maxPrice=4.86574336E8, minPrice=41605.0, meanPrice=1.2586576E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2001}	MaxMinMeanResultsWritable{maxPrice=6.555495E8, minPrice=8.8778448E7, meanPrice=2.48109312E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=2000}	MaxMinMeanResultsWritable{maxPrice=6.5640243E8, minPrice=1660.0, meanPrice=2.14839936E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=1996}	MaxMinMeanResultsWritable{maxPrice=7.3550496E7, minPrice=4733955.0, meanPrice=3.5000748E7}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=1995}	MaxMinMeanResultsWritable{maxPrice=7.1759616E7, minPrice=7.1759616E7, meanPrice=7.1759616E7}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=1994}	MaxMinMeanResultsWritable{maxPrice=8182542.0, minPrice=588.0, meanPrice=2045782.5}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=1992}	MaxMinMeanResultsWritable{maxPrice=5.923735E8, minPrice=5.923735E8, meanPrice=5.923735E8}
+MaxMinMeanWritable{type='Electrical energy in thousands of kilowatt-hours', year=1991}	MaxMinMeanResultsWritable{maxPrice=2515.0, minPrice=2515.0, meanPrice=2515.0}
+MaxMinMeanWritable{type='Area in square metres', year=2016}	MaxMinMeanResultsWritable{maxPrice=2.47259494E9, minPrice=4.30319936E8, meanPrice=8468313.0}
+MaxMinMeanWritable{type='Area in square metres', year=2015}	MaxMinMeanResultsWritable{maxPrice=2.80180352E9, minPrice=1.5797912E8, meanPrice=9995407.0}
+MaxMinMeanWritable{type='Area in square metres', year=2014}	MaxMinMeanResultsWritable{maxPrice=6.8526787E9, minPrice=5.523913E8, meanPrice=1.4293697E7}
+MaxMinMeanWritable{type='Area in square metres', year=2013}	MaxMinMeanResultsWritable{maxPrice=5.0945377E9, minPrice=3.57854496E8, meanPrice=1.3930553E7}
+MaxMinMeanWritable{type='Area in square metres', year=2012}	MaxMinMeanResultsWritable{maxPrice=2.79918362E9, minPrice=7.56018E7, meanPrice=8810155.0}
+MaxMinMeanWritable{type='Area in square metres', year=2011}	MaxMinMeanResultsWritable{maxPrice=3.9095616E9, minPrice=2.6440728E8, meanPrice=1.0188554E7}
+MaxMinMeanWritable{type='Area in square metres', year=2010}	MaxMinMeanResultsWritable{maxPrice=3.39241728E9, minPrice=2.23674432E8, meanPrice=8948997.0}
+MaxMinMeanWritable{type='Area in square metres', year=2009}	MaxMinMeanResultsWritable{maxPrice=2.08987072E9, minPrice=3.07118816E8, meanPrice=6449524.5}
+MaxMinMeanWritable{type='Area in square metres', year=2008}	MaxMinMeanResultsWritable{maxPrice=1.61894246E9, minPrice=1.48990016E8, meanPrice=5747776.5}
+MaxMinMeanWritable{type='Area in square metres', year=2007}	MaxMinMeanResultsWritable{maxPrice=7.8605358E9, minPrice=1.04033544E8, meanPrice=1.3455395E7}
+MaxMinMeanWritable{type='Area in square metres', year=2006}	MaxMinMeanResultsWritable{maxPrice=2.70126182E9, minPrice=4.78430976E8, meanPrice=7759442.5}
+MaxMinMeanWritable{type='Area in square metres', year=2005}	MaxMinMeanResultsWritable{maxPrice=1.57509594E9, minPrice=5.6995104E8, meanPrice=5446506.0}
+MaxMinMeanWritable{type='Area in square metres', year=2004}	MaxMinMeanResultsWritable{maxPrice=3.63565952E9, minPrice=1.43637712E8, meanPrice=9700523.0}
+MaxMinMeanWritable{type='Area in square metres', year=2003}	MaxMinMeanResultsWritable{maxPrice=1.88910067E9, minPrice=1.22825928E8, meanPrice=6013694.5}
+MaxMinMeanWritable{type='Area in square metres', year=2002}	MaxMinMeanResultsWritable{maxPrice=1.9391072E9, minPrice=5.9805824E8, meanPrice=7696712.5}
+MaxMinMeanWritable{type='Area in square metres', year=2001}	MaxMinMeanResultsWritable{maxPrice=1.20508186E9, minPrice=1.13709936E8, meanPrice=5263060.0}
+MaxMinMeanWritable{type='Area in square metres', year=2000}	MaxMinMeanResultsWritable{maxPrice=1.67156122E9, minPrice=2.7768448E8, meanPrice=5864852.5}
+MaxMinMeanWritable{type='Area in square metres', year=1999}	MaxMinMeanResultsWritable{maxPrice=1.14525926E9, minPrice=1.94243344E8, meanPrice=8123033.0}
+MaxMinMeanWritable{type='Area in square metres', year=1998}	MaxMinMeanResultsWritable{maxPrice=1.4729952E9, minPrice=4.39007904E8, meanPrice=1.0284978E7}
+MaxMinMeanWritable{type='Area in square metres', year=1997}	MaxMinMeanResultsWritable{maxPrice=1.11579213E9, minPrice=1.36794496E8, meanPrice=8023964.5}
+MaxMinMeanWritable{type='Area in square metres', year=1996}	MaxMinMeanResultsWritable{maxPrice=1.03441139E9, minPrice=1.22154384E8, meanPrice=1.0313091E7}
+MaxMinMeanWritable{type='Area in square metres', year=1995}	MaxMinMeanResultsWritable{maxPrice=2.99696922E9, minPrice=1.63635504E8, meanPrice=1.918944E7}
+MaxMinMeanWritable{type='Area in square metres', year=1994}	MaxMinMeanResultsWritable{maxPrice=1.27221043E9, minPrice=4.852796E7, meanPrice=9694801.0}
+MaxMinMeanWritable{type='Area in square metres', year=1993}	MaxMinMeanResultsWritable{maxPrice=9.6805248E8, minPrice=3.67837952E8, meanPrice=1.1069178E7}
+MaxMinMeanWritable{type='Area in square metres', year=1992}	MaxMinMeanResultsWritable{maxPrice=2.98407488E8, minPrice=5.2819876E7, meanPrice=3510592.2}
+MaxMinMeanWritable{type='Area in square metres', year=1991}	MaxMinMeanResultsWritable{maxPrice=2.97824064E8, minPrice=3.6226996E7, meanPrice=5701078.5}
+MaxMinMeanWritable{type='Area in square metres', year=1990}	MaxMinMeanResultsWritable{maxPrice=4.9458832E8, minPrice=3.5962824E7, meanPrice=4955892.5}
+MaxMinMeanWritable{type='Area in square metres', year=1989}	MaxMinMeanResultsWritable{maxPrice=4.53781792E8, minPrice=2.483893E7, meanPrice=5938402.0}
+MaxMinMeanWritable{type='Area in square metres', year=1988}	MaxMinMeanResultsWritable{maxPrice=8.8404968E7, minPrice=2.6393128E7, meanPrice=4284297.5}
+MaxMinMeanWritable{type='Weight in kilograms', year=2016}	MaxMinMeanResultsWritable{maxPrice=2.48060363E11, minPrice=4.1450615E10, meanPrice=2.9000642E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2015}	MaxMinMeanResultsWritable{maxPrice=2.72857481E11, minPrice=9.5171265E10, meanPrice=2.8205202E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2014}	MaxMinMeanResultsWritable{maxPrice=5.9687731E11, minPrice=1.35455605E11, meanPrice=4.8702448E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2013}	MaxMinMeanResultsWritable{maxPrice=3.57142266E11, minPrice=1.66002033E11, meanPrice=3.336314E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2012}	MaxMinMeanResultsWritable{maxPrice=5.10410228E11, minPrice=1.67245038E11, meanPrice=4.022886E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2011}	MaxMinMeanResultsWritable{maxPrice=3.22535031E11, minPrice=7.8278124E10, meanPrice=3.3768592E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2010}	MaxMinMeanResultsWritable{maxPrice=3.3458602E11, minPrice=4.3021148E10, meanPrice=2.630479E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2009}	MaxMinMeanResultsWritable{maxPrice=2.31311999E11, minPrice=3.31222098E10, meanPrice=2.4517756E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2008}	MaxMinMeanResultsWritable{maxPrice=3.43006904E11, minPrice=6.1388354E10, meanPrice=3.2824516E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2007}	MaxMinMeanResultsWritable{maxPrice=2.64486519E11, minPrice=5.3363847E10, meanPrice=2.3254552E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2006}	MaxMinMeanResultsWritable{maxPrice=2.17888096E11, minPrice=6.5759486E10, meanPrice=2.0259064E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2005}	MaxMinMeanResultsWritable{maxPrice=1.79490406E11, minPrice=3.8826275E10, meanPrice=1.8390686E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2004}	MaxMinMeanResultsWritable{maxPrice=1.31626557E11, minPrice=2.78786519E10, meanPrice=1.3777223E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2003}	MaxMinMeanResultsWritable{maxPrice=1.16658381E11, minPrice=2.10228593E10, meanPrice=1.2230307E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2002}	MaxMinMeanResultsWritable{maxPrice=9.9956031E10, minPrice=1.81751194E10, meanPrice=1.1334963E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=2001}	MaxMinMeanResultsWritable{maxPrice=7.9878775E10, minPrice=1.77344471E10, meanPrice=8991969.0}
+MaxMinMeanWritable{type='Weight in kilograms', year=2000}	MaxMinMeanResultsWritable{maxPrice=1.67304823E11, minPrice=2.87420989E10, meanPrice=1.2457804E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1999}	MaxMinMeanResultsWritable{maxPrice=6.4262328E10, minPrice=1.59533128E10, meanPrice=7954218.5}
+MaxMinMeanWritable{type='Weight in kilograms', year=1998}	MaxMinMeanResultsWritable{maxPrice=5.8991669E10, minPrice=1.74620385E10, meanPrice=8291660.5}
+MaxMinMeanWritable{type='Weight in kilograms', year=1997}	MaxMinMeanResultsWritable{maxPrice=5.7915056E10, minPrice=1.88052685E10, meanPrice=8108820.0}
+MaxMinMeanWritable{type='Weight in kilograms', year=1996}	MaxMinMeanResultsWritable{maxPrice=7.1383597E10, minPrice=1.58927217E10, meanPrice=1.0828209E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1995}	MaxMinMeanResultsWritable{maxPrice=7.0592463E10, minPrice=1.30775572E10, meanPrice=1.0448492E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1994}	MaxMinMeanResultsWritable{maxPrice=4.7811736E10, minPrice=7.585982E9, meanPrice=9144608.0}
+MaxMinMeanWritable{type='Weight in kilograms', year=1993}	MaxMinMeanResultsWritable{maxPrice=2.93203067E10, minPrice=1.02282834E10, meanPrice=7204625.0}
+MaxMinMeanWritable{type='Weight in kilograms', year=1992}	MaxMinMeanResultsWritable{maxPrice=2.81263186E10, minPrice=6.8665318E9, meanPrice=7634980.0}
+MaxMinMeanWritable{type='Weight in kilograms', year=1991}	MaxMinMeanResultsWritable{maxPrice=2.84690575E10, minPrice=3.27529728E9, meanPrice=1.021125E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1990}	MaxMinMeanResultsWritable{maxPrice=1.75922504E10, minPrice=5.3067418E9, meanPrice=1.048327E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1989}	MaxMinMeanResultsWritable{maxPrice=1.74008709E10, minPrice=4.853609E9, meanPrice=1.0483427E7}
+MaxMinMeanWritable{type='Weight in kilograms', year=1988}	MaxMinMeanResultsWritable{maxPrice=1.14289684E10, minPrice=5.7231933E9, meanPrice=1.4612961E7}
+MaxMinMeanWritable{type='Number of packages', year=2016}	MaxMinMeanResultsWritable{maxPrice=1.30803168E8, minPrice=24018.0, meanPrice=6871851.0}
+MaxMinMeanWritable{type='Number of packages', year=2015}	MaxMinMeanResultsWritable{maxPrice=9.0590768E7, minPrice=654873.0, meanPrice=7877937.5}
+MaxMinMeanWritable{type='Number of packages', year=2014}	MaxMinMeanResultsWritable{maxPrice=3.8300184E7, minPrice=35708.0, meanPrice=3919249.2}
+MaxMinMeanWritable{type='Number of packages', year=2013}	MaxMinMeanResultsWritable{maxPrice=4.5889916E7, minPrice=175.0, meanPrice=1.2733769E7}
+MaxMinMeanWritable{type='Number of packages', year=2012}	MaxMinMeanResultsWritable{maxPrice=696235.0, minPrice=6961.0, meanPrice=144575.28}
+MaxMinMeanWritable{type='Number of packages', year=2011}	MaxMinMeanResultsWritable{maxPrice=4.9709872E7, minPrice=670840.0, meanPrice=5668106.5}
+MaxMinMeanWritable{type='Number of packages', year=2010}	MaxMinMeanResultsWritable{maxPrice=5.7550616E7, minPrice=13544.0, meanPrice=4192258.0}
+MaxMinMeanWritable{type='Number of packages', year=2009}	MaxMinMeanResultsWritable{maxPrice=1.1068909E7, minPrice=44618.0, meanPrice=1217627.1}
+MaxMinMeanWritable{type='Number of packages', year=2008}	MaxMinMeanResultsWritable{maxPrice=8.6829312E7, minPrice=697.0, meanPrice=7282175.5}
+MaxMinMeanWritable{type='Number of packages', year=2007}	MaxMinMeanResultsWritable{maxPrice=7.994672E7, minPrice=43686.0, meanPrice=5971936.5}
+MaxMinMeanWritable{type='Number of packages', year=2006}	MaxMinMeanResultsWritable{maxPrice=1268.0, minPrice=1268.0, meanPrice=1268.0}
+MaxMinMeanWritable{type='Number of packages', year=2004}	MaxMinMeanResultsWritable{maxPrice=872467.0, minPrice=872467.0, meanPrice=436233.5}
+MaxMinMeanWritable{type='Number of packages', year=2003}	MaxMinMeanResultsWritable{maxPrice=1.3074653E7, minPrice=538922.0, meanPrice=6806787.5}
+MaxMinMeanWritable{type='Number of packages', year=2002}	MaxMinMeanResultsWritable{maxPrice=550.0, minPrice=550.0, meanPrice=550.0}
+MaxMinMeanWritable{type='Number of packages', year=2001}	MaxMinMeanResultsWritable{maxPrice=1.3468319E7, minPrice=6987.0, meanPrice=3392338.5}
+MaxMinMeanWritable{type='Number of packages', year=2000}	MaxMinMeanResultsWritable{maxPrice=1.2451122E7, minPrice=436.0, meanPrice=6225779.0}

@@ -1,5 +1,7 @@
 package TDE01.Questao6;
 
+import TDE01.Questao5.MaxMinMeanValuesWritable;
+import TDE01.Questao5.MaxMinMeanWritable;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
@@ -35,10 +37,12 @@ public class CountryLargestCommodityAverage {
         j1.setJarByClass(CountryLargestCommodityAverage.class);
         j1.setMapperClass(CountryLargestCommodityAverage.MapEtapaA.class);
         j1.setReducerClass(CountryLargestCommodityAverage.ReduceEtapaA.class);
+        j1.setCombinerClass(CombineEtapaA.class);
 
         j2.setJarByClass(CountryLargestCommodityAverage.class);
         j2.setMapperClass(CountryLargestCommodityAverage.MapEtapaB.class);
         j2.setReducerClass(CountryLargestCommodityAverage.ReduceEtapaB.class);
+        j2.setCombinerClass(CombineEtapaB.class);
 
         j1.setMapOutputKeyClass(Text.class);
         j1.setMapOutputValueClass(CountryCommoditiesValuesWritable.class);
@@ -80,6 +84,21 @@ public class CountryLargestCommodityAverage {
             }
         }
     }
+    public static class CombineEtapaA extends Reducer<Text, CountryCommoditiesValuesWritable, Text, CountryCommoditiesValuesWritable>{
+        public void reduce(Text key, Iterable<CountryCommoditiesValuesWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            float somaPrecos = 0;
+            int somaTotal = 0;
+
+            for(CountryCommoditiesValuesWritable o : values){
+                somaTotal += o.getQtd();
+                somaPrecos += o.getValor();
+            }
+
+            con.write(key, new CountryCommoditiesValuesWritable(somaPrecos, somaTotal));
+        }
+    }
 
 
     public static class ReduceEtapaA extends Reducer<Text, CountryCommoditiesValuesWritable, Text, FloatWritable> {
@@ -111,6 +130,24 @@ public class CountryLargestCommodityAverage {
             String country = campos[0];
             float average = Float.parseFloat(campos[1]);
             con.write(new Text("Chave"), new CountryAvarageWritable(country, average));
+        }
+    }
+
+    public static class CombineEtapaB extends Reducer<Text, CountryAvarageWritable, Text, CountryAvarageWritable>{
+        public void reduce(Text key, Iterable<CountryAvarageWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            String country = null;
+            float valor = Float.MIN_VALUE;
+
+            for(CountryAvarageWritable v : values){
+                if(v.getValor() > valor){
+                    country = v.getCountry();
+                    valor = v.getValor();
+                }
+            }
+
+            con.write(key, new CountryAvarageWritable(country, valor));
         }
     }
 

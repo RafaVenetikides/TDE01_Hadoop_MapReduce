@@ -67,19 +67,18 @@ public class AveragePriceinBrazil {
         }
     }
 
-    public static class CombineForAverage extends Reducer<BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables, Text, IntWritable>{
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+    public static class CombineForAverage extends Reducer<BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables, BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables>{
+        public void reduce(BrazilCommoditiesTypeWritable key, Iterable<BrazilCommoditiesAverageVariables> values, Context con)
                 throws IOException, InterruptedException {
 
-            // somar as temperaturas e as qtds para cada chave
+            float somaValores = 0;
             int somaQtds = 0;
-            for(IntWritable o : values){
-                somaQtds += o.get();
+            for(BrazilCommoditiesAverageVariables o : values){
+                somaQtds += o.getQtd();
+                somaValores += o.getValor();
             }
-            // passando para o reduce valores pre-somados
-            con.write(key, new IntWritable(somaQtds));
 
-
+            con.write(key, new BrazilCommoditiesAverageVariables(somaQtds, somaValores));
         }
     }
 

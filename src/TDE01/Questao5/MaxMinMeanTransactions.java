@@ -1,9 +1,7 @@
 package TDE01.Questao5;
 
-import TDE01.Questao2.TransactionsFlowTypeYear;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -34,7 +32,7 @@ public class MaxMinMeanTransactions {
 
         j.setJarByClass(MaxMinMeanTransactions.class);
         j.setMapperClass(MapMaxMinMean.class);
-        j.setCombinerClass(CombineForAverage.class);
+        j.setCombinerClass(CombineMaxMinMean.class);
         j.setReducerClass(ReduceMaxMinMean.class);
 
         j.setMapOutputKeyClass(MaxMinMeanWritable.class);
@@ -61,19 +59,19 @@ public class MaxMinMeanTransactions {
         }
     }
 
-    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+    public static class CombineMaxMinMean extends Reducer<MaxMinMeanWritable, MaxMinMeanValuesWritable, MaxMinMeanWritable, MaxMinMeanValuesWritable>{
+        public void reduce(MaxMinMeanWritable key, Iterable<MaxMinMeanValuesWritable> values, Context con)
                 throws IOException, InterruptedException {
 
-            // somar as temperaturas e as qtds para cada chave
-            int somaQtds = 0;
-            for(IntWritable o : values){
-                somaQtds += o.get();
+            float sumPrice = 0;
+            int somaTotal = 0;
+
+            for(MaxMinMeanValuesWritable o : values){
+                sumPrice += o.getPrice();
+                somaTotal += o.getQtd();
             }
-            // passando para o reduce valores pre-somados
-            con.write(key, new IntWritable(somaQtds));
 
-
+            con.write(key, new MaxMinMeanValuesWritable(sumPrice, somaTotal));
         }
     }
     public  static class ReduceMaxMinMean extends Reducer<MaxMinMeanWritable, MaxMinMeanValuesWritable, MaxMinMeanWritable, MaxMinMeanResultsWritable>{
