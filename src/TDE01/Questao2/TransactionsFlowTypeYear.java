@@ -1,5 +1,6 @@
 package TDE01.Questao2;
 
+import TDE01.Questao1.BrazilTransactions;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -33,6 +34,7 @@ public class TransactionsFlowTypeYear {
 
         j.setJarByClass(TransactionsFlowTypeYear.class);
         j.setMapperClass(MapforFlowtypeYear.class);
+        j.setCombinerClass(CombineForAverage.class);
         j.setReducerClass(ReduceforFlowtypeYear.class);
 
         j.setMapOutputKeyClass(FlowTypeYearWritable.class);
@@ -61,6 +63,22 @@ public class TransactionsFlowTypeYear {
 
                 con.write(new FlowTypeYearWritable(flowType, year), new IntWritable(qtd));
             }
+        }
+    }
+
+    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
+        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            // somar as temperaturas e as qtds para cada chave
+            int somaQtds = 0;
+            for(IntWritable o : values){
+                somaQtds += o.get();
+            }
+            // passando para o reduce valores pre-somados
+            con.write(key, new IntWritable(somaQtds));
+
+
         }
     }
 

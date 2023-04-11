@@ -1,5 +1,6 @@
 package TDE01.Questao5;
 
+import TDE01.Questao2.TransactionsFlowTypeYear;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.FloatWritable;
@@ -33,6 +34,7 @@ public class MaxMinMeanTransactions {
 
         j.setJarByClass(MaxMinMeanTransactions.class);
         j.setMapperClass(MapMaxMinMean.class);
+        j.setCombinerClass(CombineForAverage.class);
         j.setReducerClass(ReduceMaxMinMean.class);
 
         j.setMapOutputKeyClass(MaxMinMeanWritable.class);
@@ -56,6 +58,22 @@ public class MaxMinMeanTransactions {
                 int qtd = 1;
                 con.write(new MaxMinMeanWritable(type, year), new MaxMinMeanValuesWritable(price, qtd));
             }
+        }
+    }
+
+    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
+        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            // somar as temperaturas e as qtds para cada chave
+            int somaQtds = 0;
+            for(IntWritable o : values){
+                somaQtds += o.get();
+            }
+            // passando para o reduce valores pre-somados
+            con.write(key, new IntWritable(somaQtds));
+
+
         }
     }
     public  static class ReduceMaxMinMean extends Reducer<MaxMinMeanWritable, MaxMinMeanValuesWritable, MaxMinMeanWritable, MaxMinMeanResultsWritable>{

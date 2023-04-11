@@ -1,5 +1,6 @@
 package TDE01.Questao1;
 
+import advanced.customwritable.FireAvgTempWritable;
 import basic.WordCount;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -33,6 +34,7 @@ public class BrazilTransactions {
 
         j.setJarByClass(BrazilTransactions.class);
         j.setMapperClass(MapforBrazil.class);
+        j.setCombinerClass(CombineForAverage.class);
         j.setReducerClass(ReduceforBrazil.class);
 
 
@@ -65,6 +67,22 @@ public class BrazilTransactions {
         }
     }
 
+
+    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
+        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+                throws IOException, InterruptedException {
+
+            // somar as temperaturas e as qtds para cada chave
+            int somaQtds = 0;
+            for(IntWritable o : values){
+                somaQtds += o.get();
+            }
+            // passando para o reduce valores pre-somados
+            con.write(key, new IntWritable(somaQtds));
+
+
+        }
+    }
 
 
     public static class ReduceforBrazil extends Reducer<Text, IntWritable, Text, IntWritable>{
