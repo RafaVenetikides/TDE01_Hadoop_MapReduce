@@ -66,8 +66,8 @@ public class TransactionsFlowTypeYear {
         }
     }
 
-    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+    public static class CombineForAverage extends Reducer<Text, IntWritable, FlowTypeYearWritable, IntWritable>{
+        public void reduce(FlowTypeYearWritable key, Iterable<IntWritable> values, Context con)
                 throws IOException, InterruptedException {
 
             // somar as temperaturas e as qtds para cada chave

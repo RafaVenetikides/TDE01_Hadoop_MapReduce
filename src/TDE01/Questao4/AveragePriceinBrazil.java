@@ -67,7 +67,7 @@ public class AveragePriceinBrazil {
         }
     }
 
-    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
+    public static class CombineForAverage extends Reducer<BrazilCommoditiesTypeWritable, BrazilCommoditiesAverageVariables, Text, IntWritable>{
         public void reduce(Text key, Iterable<IntWritable> values, Context con)
                 throws IOException, InterruptedException {
 

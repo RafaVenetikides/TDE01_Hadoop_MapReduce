@@ -52,6 +52,7 @@ public class CountryLargestCommodityAverage {
 
 
 
+
         FileInputFormat.addInputPath(j1, input);
         FileOutputFormat.setOutputPath(j1, intermediate);
         FileInputFormat.addInputPath(j2, intermediate);

@@ -65,17 +65,18 @@ public class CommodityValuePerYear {
         }
     }
 
-    public static class CombineForAverage extends Reducer<Text, IntWritable, Text, IntWritable>{
-        public void reduce(Text key, Iterable<IntWritable> values, Context con)
+    public static class CombineForAverage extends Reducer<Text, CommValuesWritable, Text, CommValuesWritable>{
+        public void reduce(Text key, Iterable<CommValuesWritable> values, Context con)
                 throws IOException, InterruptedException {
 
-            // somar as temperaturas e as qtds para cada chave
+            float somaValores = 0;
             int somaQtds = 0;
-            for(IntWritable o : values){
-                somaQtds += o.get();
+            for(CommValuesWritable o : values){
+                somaQtds += o.getQtd();
+                somaValores += o.getSomaValores();
             }
             // passando para o reduce valores pre-somados
-            con.write(key, new IntWritable(somaQtds));
+            con.write(key, new CommValuesWritable(somaValores, somaQtds));
 
 
         }
@@ -85,7 +86,7 @@ public class CommodityValuePerYear {
         public void reduce(Text key, Iterable<CommValuesWritable> values, Context con)
                 throws IOException, InterruptedException {
 
-            float somaValores = 0.0f;
+            float somaValores = 0;
             int somaQtds = 0;
             for (CommValuesWritable o : values){
                 somaValores += o.getSomaValores();

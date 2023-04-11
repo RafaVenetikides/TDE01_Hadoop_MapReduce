@@ -72,7 +72,6 @@ public class BrazilTransactions {
         public void reduce(Text key, Iterable<IntWritable> values, Context con)
                 throws IOException, InterruptedException {
 
-            // somar as temperaturas e as qtds para cada chave
             int somaQtds = 0;
             for(IntWritable o : values){
                 somaQtds += o.get();
