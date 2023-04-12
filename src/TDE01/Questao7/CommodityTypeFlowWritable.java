@@ -40,7 +40,7 @@ public class CommodityTypeFlowWritable
     public String toString() {
         return "CommodityTypeFlowWritable{" +
                 "commodity='" + commodity + '\'' +
-                ", flow=\t'" + flow + '\'' +
+                ", flow=\t" + flow +
                 "\t}";
     }
 

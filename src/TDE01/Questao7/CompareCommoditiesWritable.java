@@ -11,13 +11,15 @@ public class CompareCommoditiesWritable
         implements WritableComparable<CompareCommoditiesWritable> {
     private String commodity;
     private int qtd;
+    private String flow;
 
     public CompareCommoditiesWritable() {
     }
 
-    public CompareCommoditiesWritable(String commodity, int qtd) {
+    public CompareCommoditiesWritable(String commodity, int qtd, String flow) {
         this.commodity = commodity;
         this.qtd = qtd;
+        this.flow = flow;
     }
 
     public String getCommodity() {
@@ -36,17 +38,25 @@ public class CompareCommoditiesWritable
         this.qtd = qtd;
     }
 
+    public String getFlow() {
+        return flow;
+    }
+
+    public void setFlow(String flow) {
+        this.flow = flow;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CompareCommoditiesWritable that = (CompareCommoditiesWritable) o;
-        return qtd == that.qtd && Objects.equals(commodity, that.commodity);
+        return qtd == that.qtd && Objects.equals(commodity, that.commodity) && Objects.equals(flow, that.flow);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(commodity, qtd);
+        return Objects.hash(commodity, qtd, flow);
     }
 
     @Override
@@ -58,11 +68,13 @@ public class CompareCommoditiesWritable
     public void write(DataOutput dataOutput) throws IOException {
         dataOutput.writeUTF(commodity);
         dataOutput.writeInt(qtd);
+        dataOutput.writeUTF(flow);
     }
 
     @Override
     public void readFields(DataInput dataInput) throws IOException {
         commodity = dataInput.readUTF();
         qtd = dataInput.readInt();
+        flow = dataInput.readUTF();
     }
 }

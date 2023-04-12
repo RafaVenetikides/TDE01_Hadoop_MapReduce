@@ -111,9 +111,10 @@ public class MostCommercializedCommodity {
             String colunas[] = linha.split("\t");
 
             String commodity = colunas[0];
-            int qtd = Integer.parseInt(colunas[1]);
+            String flow = colunas[1];
+            int qtd = Integer.parseInt(colunas[3]);
 
-            con.write(new Text("Chave"), new CompareCommoditiesWritable(commodity, qtd));
+            con.write(new Text("Chave"), new CompareCommoditiesWritable(commodity, qtd, flow));
         }
     }
     /*
@@ -132,15 +133,27 @@ public class MostCommercializedCommodity {
         public void reduce(Text key, Iterable<CompareCommoditiesWritable> values, Context con)
                 throws IOException, InterruptedException{
 
-            int maiorSoma = Integer.MIN_VALUE;
-            String commodity = null;
-            for(CompareCommoditiesWritable v : values){
-                if (v.getQtd() > maiorSoma){
-                    maiorSoma = v.getQtd();
-                    commodity = v.getCommodity();
+            int maiorSomaExport = Integer.MIN_VALUE;
+            String commodityExport = null;
+            int maiorSomaImport = Integer.MIN_VALUE;
+            String commodityImport = null;
+            for (CompareCommoditiesWritable v : values){
+                if(v.getFlow().equals("Export")){
+                    if(v.getQtd() > maiorSomaExport){
+                        maiorSomaExport = v.getQtd();
+                        commodityExport = v.getCommodity();
+                    }
+                }
+                if(v.getFlow().equals("Import")){
+                    if(v.getQtd() > maiorSomaImport){
+                        maiorSomaImport = v.getQtd();
+                        commodityImport = v.getCommodity();
+                    }
                 }
             }
-            con.write(new Text(commodity), new IntWritable(maiorSoma));
+            con.write(new Text(commodityImport + "  Import}  qtd = "), new IntWritable(maiorSomaImport));
+            con.write(new Text(commodityExport + "  Export}  qtd = "), new IntWritable(maiorSomaExport));
+
         }
     }
 }
