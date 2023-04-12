@@ -5,6 +5,7 @@ import org.apache.hadoop.io.WritableComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.Objects;
 
 public class CommodityTypeFlowWritable
         implements WritableComparable<CommodityTypeFlowWritable> {
@@ -39,8 +40,21 @@ public class CommodityTypeFlowWritable
     public String toString() {
         return "CommodityTypeFlowWritable{" +
                 "commodity='" + commodity + '\'' +
-                ", flow='" + flow + '\'' +
-                '}';
+                ", flow=\t'" + flow + '\'' +
+                "\t}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CommodityTypeFlowWritable that = (CommodityTypeFlowWritable) o;
+        return commodity == that.commodity && Objects.equals(flow, that.flow);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(commodity, flow);
     }
 
     @Override
