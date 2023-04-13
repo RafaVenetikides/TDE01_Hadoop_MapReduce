@@ -1,2 +1,2 @@
-CommodityTypeFlowWritable{commodity='210230', flow=  Import}  qtd = 	27
-CommodityTypeFlowWritable{commodity='190230', flow=  Export}  qtd = 	24
+CommodityTypeFlowWritable{commodity='190230', flow=Export	24
+CommodityTypeFlowWritable{commodity='210230', flow=Import	27

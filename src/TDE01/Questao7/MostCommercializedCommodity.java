@@ -37,12 +37,12 @@ public class MostCommercializedCommodity {
 
         j1.setJarByClass(MostCommercializedCommodity.class);
         j1.setMapperClass(MapCommodityQuantities.class);
-        //j.setCombinerClass(CombineCommoditiesQuantities.class);
+        j1.setCombinerClass(CombineCommoditiesQuantities.class);
         j1.setReducerClass(ReduceCommoditiesQuantities.class);
 
         j2.setJarByClass(MostCommercializedCommodity.class);
         j2.setMapperClass(MapCompareCommodities.class);
-        //j2.setCombinerClass();
+        j2.setCombinerClass(CombineCompareCommodities.class);
         j2.setReducerClass(ReduceCompareCommodities.class);
 
         j1.setMapOutputKeyClass(CommodityTypeFlowWritable.class);
@@ -78,17 +78,19 @@ public class MostCommercializedCommodity {
             }
         }
     }
-    /*
-    public static class CombineCommoditiesQuantities extends Reducer<, , , > {
-        public void reduce( key, Iterable<> values, Context con)
+    public static class CombineCommoditiesQuantities extends Reducer<CommodityTypeFlowWritable, IntWritable, CommodityTypeFlowWritable, IntWritable> {
+        public void reduce(CommodityTypeFlowWritable key, Iterable<IntWritable> values, Context con)
                 throws IOException, InterruptedException {
 
+            int somaQtds = 0;
+            for (IntWritable v : values){
+                somaQtds += v.get();
+            }
 
-
-            con.write();
+            con.write(key, new IntWritable(somaQtds));
         }
     }
-    */
+
 
     public  static class ReduceCommoditiesQuantities extends Reducer<CommodityTypeFlowWritable, IntWritable, CommodityTypeFlowWritable, IntWritable>{
         public void reduce(CommodityTypeFlowWritable key, Iterable<IntWritable> values, Context con)
@@ -117,43 +119,54 @@ public class MostCommercializedCommodity {
             con.write(new Text("Chave"), new CompareCommoditiesWritable(commodity, qtd, flow));
         }
     }
-    /*
-    public static class CombineCommoditiesQuantities extends Reducer<, , , > {
-        public void reduce( key, Iterable<> values, Context con)
+
+    public static class CombineCompareCommodities extends Reducer<Text, CompareCommoditiesWritable, Text, CompareCommoditiesWritable> {
+        public void reduce(Text key, Iterable<CompareCommoditiesWritable> values, Context con)
                 throws IOException, InterruptedException {
 
-
-
-            con.write();
-        }
-    }
-    */
-
-    public  static class ReduceCompareCommodities extends Reducer<Text, CompareCommoditiesWritable, Text, IntWritable>{
-        public void reduce(Text key, Iterable<CompareCommoditiesWritable> values, Context con)
-                throws IOException, InterruptedException{
-
             int maiorSomaExport = Integer.MIN_VALUE;
-            String commodityExport = null;
+            CompareCommoditiesWritable commodityExport = new CompareCommoditiesWritable();
             int maiorSomaImport = Integer.MIN_VALUE;
-            String commodityImport = null;
+            CompareCommoditiesWritable commodityImport = new CompareCommoditiesWritable();
             for (CompareCommoditiesWritable v : values){
                 if(v.getFlow().equals("Export")){
                     if(v.getQtd() > maiorSomaExport){
                         maiorSomaExport = v.getQtd();
-                        commodityExport = v.getCommodity();
+                        commodityExport.setCommodity(v.getCommodity());
+                        commodityExport.setQtd(v.getQtd());
+                        commodityExport.setFlow(v.getFlow());
                     }
                 }
                 if(v.getFlow().equals("Import")){
                     if(v.getQtd() > maiorSomaImport){
                         maiorSomaImport = v.getQtd();
-                        commodityImport = v.getCommodity();
+                        commodityImport.setFlow(v.getFlow());
+                        commodityImport.setQtd(v.getQtd());
+                        commodityImport.setCommodity(v.getCommodity());
                     }
                 }
             }
-            con.write(new Text(commodityImport + "  Import}  qtd = "), new IntWritable(maiorSomaImport));
-            con.write(new Text(commodityExport + "  Export}  qtd = "), new IntWritable(maiorSomaExport));
+            con.write(new Text("Export"), commodityExport);
+            con.write(new Text("Import"), commodityImport);
+        }
+    }
 
+
+    public  static class ReduceCompareCommodities extends Reducer<Text, CompareCommoditiesWritable, Text, IntWritable>{
+        public void reduce(Text key, Iterable<CompareCommoditiesWritable> values, Context con)
+                throws IOException, InterruptedException{
+
+            int maiorSoma = Integer.MIN_VALUE;
+            CompareCommoditiesWritable commodity = new CompareCommoditiesWritable();
+            for (CompareCommoditiesWritable v : values){
+                    if(v.getQtd() > maiorSoma){
+                        maiorSoma = v.getQtd();
+                        commodity.setQtd(v.getQtd());
+                        commodity.setFlow(v.getFlow());
+                        commodity.setCommodity(v.getCommodity());
+                    }
+            }
+            con.write(new Text(commodity.getCommodity() + commodity.getFlow()), new IntWritable(maiorSoma));
         }
     }
 }
