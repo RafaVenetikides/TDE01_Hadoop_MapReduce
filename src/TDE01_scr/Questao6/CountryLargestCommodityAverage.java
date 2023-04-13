@@ -1,7 +1,6 @@
-package TDE01.Questao6;
+package TDE01_scr.Questao6;
 
-import TDE01.Questao5.MaxMinMeanValuesWritable;
-import TDE01.Questao5.MaxMinMeanWritable;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;

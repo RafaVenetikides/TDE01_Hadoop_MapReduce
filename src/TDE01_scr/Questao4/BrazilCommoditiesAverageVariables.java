@@ -1,4 +1,4 @@
-package TDE01.Questao4;
+package TDE01_scr.Questao4;
 
 import org.apache.hadoop.io.WritableComparable;
 
